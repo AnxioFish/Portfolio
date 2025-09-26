@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 初始样式设置 */
+        :root {
+            --primary-color: #007bff;
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --secondary-text: #555555;
+            --border-color: #dddddd;
+            --section-bg: #f9f9f9;
+        }
+        
+        /* 暗色主题变量 */
+        .dark-theme {
+            --primary-color: #00bfff;
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --secondary-text: #cccccc;
+            --border-color: #333333;
+            --section-bg: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" data-i18n="logo">我的作品集</div>
+            <div class="nav-controls">
+                <!-- 语言切换按钮 -->
+                <div class="language-switcher">
+                    <button id="zhBtn" class="lang-btn active" onclick="switchLanguage('zh')">中文</button>
+                    <button id="enBtn" class="lang-btn" onclick="switchLanguage('en')">English</button>
+                </div>
+                
+                <!-- 主题切换按钮 -->
+                <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
+                    🌞
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav.home">首页</a></li>
+                <li><a href="#about" data-i18n="nav.about">关于我</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">项目</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">联系</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">你好，我是<span class="highlight">Python Developer</span></h1>
+            <p data-i18n="hero.subtitle">我是一名专注于后端开发的Python开发者，擅长消息中间件、实时数据处理和高可用架构设计。</p>
+            <a href="#projects" class="btn" data-i18n="hero.btn">查看我的作品</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            
+            <!-- 个人简介部分 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/id/1025/400/400" alt="个人照片">
+                </div>
+                <div class="about-text">
+                    <h3>你好，我是<span class="highlight">Python Developer</span></h3>
+                    <p>我是一名专注于后端开发的Python开发者，擅长消息中间件、实时数据处理和高可用架构设计。</p>
+                    <p>在技术领域，我热衷于探索新兴技术，尤其对Rust语言有着浓厚的兴趣。除了编程，我还喜欢看动画，特别是《幸运星》、《日常》和《东方Project》系列。</p>
+                    <p>我致力于通过技术创新解决实际问题，不断优化系统性能，提升用户体验。无论是复杂的架构设计还是精细的代码实现，我都能以专业的态度完成。</p>
+                    <div class="about-social">
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 技能标签部分 -->
+            <div class="skills-section">
+                <h3>专业技能</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>编程语言与框架</h4>
+                        <div class="skill-bar">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Next.js</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Rust</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>数据库与搜索</h4>
+                        <div class="skill-bar">
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">ElasticSearch</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>技能标签</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag expert">Python</span>
+                            <span class="skill-tag expert">MongoDB</span>
+                            <span class="skill-tag advanced">Next.js</span>
+                            <span class="skill-tag advanced">ElasticSearch</span>
+                            <span class="skill-tag intermediate">Rust</span>
+                            <span class="skill-tag advanced">消息中间件</span>
+                            <span class="skill-tag advanced">实时数据处理</span>
+                            <span class="skill-tag expert">高可用架构</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 专业经历时间线 -->
+            <div class="timeline-section">
+                <h3>专业经历</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h4>软件工程师</h4>
+                            <p class="timeline-company">OpenAI</p>
+                            <p class="timeline-date">2021年 - 2023年</p>
+                            <p>参与大规模语言模型的开发和优化，负责数据处理管道的设计和实现，解决高并发和分布式系统挑战。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h4>软件工程师</h4>
+                            <p class="timeline-company">Google</p>
+                            <p class="timeline-date">2017年 - 2020年</p>
+                            <p>开发和维护Google Cloud Platform相关服务，设计高可用、可扩展的后端系统，优化性能和用户体验。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h4>计算机科学硕士</h4>
+                            <p class="timeline-company">斯坦福大学</p>
+                            <p class="timeline-date">2014年 - 2016年</p>
+                            <p>专注于分布式系统和人工智能研究，参与多个研究项目，发表论文数篇。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h4>计算机科学学士</h4>
+                            <p class="timeline-company">清华大学</p>
+                            <p class="timeline-date">2010年 - 2014年</p>
+                            <p>主修计算机科学，辅修数学，获得优秀毕业生称号，GPA排名前5%。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 个人成就和证书 -->
+            <div class="achievements-section">
+                <h3>成就与证书</h3>
+                <div class="achievements-container">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-content">
+                            <h4>清华大学优秀毕业生</h4>
+                            <p>2014年获得清华大学计算机科学系优秀毕业生称号</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🌟</div>
+                        <div class="achievement-content">
+                            <h4>微软Most Valuable Professional (MVP)</h4>
+                            <p>连续3年获得微软MVP认证，在开发社区贡献突出</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">📱</div>
+                        <div class="achievement-content">
+                            <h4>华为开发者认证</h4>
+                            <p>获得华为云平台专业开发者认证</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>我的项目</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="https://picsum.photos/id/1/600/400" alt="项目1">
+                    <div class="project-info">
+                        <h3>项目名称 1</h3>
+                        <p>项目简短描述，包含使用的技术和实现的功能。</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://picsum.photos/id/20/600/400" alt="项目2">
+                    <div class="project-info">
+                        <h3>项目名称 2</h3>
+                        <p>项目简短描述，包含使用的技术和实现的功能。</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://picsum.photos/id/26/600/400" alt="项目3">
+                    <div class="project-info">
+                        <h3>项目名称 3</h3>
+                        <p>项目简短描述，包含使用的技术和实现的功能。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-i18n="contact.title">联系我</h2>
+            
+            <!-- 联系表单 -->
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">姓名</label>
+                            <input type="text" id="name" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">邮箱</label>
+                            <input type="email" id="email" placeholder="请输入您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">留言</label>
+                            <textarea id="message" rows="5" placeholder="请输入您的留言内容" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-i18n="contact.form.submit">发送消息</button>
+                    </form>
+                </div>
+                
+                <!-- 联系信息和社交媒体链接 -->
+                <div class="contact-info">
+                    <h3 data-i18n="contact.info.title">联系方式</h3>
+                    <div class="social-links">
+                        <div class="social-item">
+                            <span class="social-icon">🏠</span>
+                            <a href="#" data-i18n="contact.info.website">个人网页：导航到本网站地址</a>
+                        </div>
+                        <div class="social-item">
+                            <span class="social-icon">📧</span>
+                            <a href="mailto:3228843921@qq.com">邮箱：3228843921@qq.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-note">
+                        <p data-i18n="contact.info.note">有任何问题或合作意向，欢迎随时联系我！我会尽快回复您。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2023 我的个人作品集. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
